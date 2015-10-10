@@ -14,14 +14,6 @@ angular.module('starter.controllers', [])
   .controller('proposeCtrl', function($scope) {
   })
 
-  .controller('shareCtrl', function($scope, $http) {
-    var ref = "http://localhost:3000/truths";
-    $scope.truth = $http.get(ref);
-    console.log(truth);
+  .controller('chatroomCtrl', function($scope, $http) {
+    var ref = "http://localhost:3000/chatroom";
   })
-
-  .controller('dareCtrl', function($scope, $http) {
-    var ref = "http://localhost:3000/dares";
-    $scope.dare = $http.get(ref);
-    console.log($scope.dare);
-  });
