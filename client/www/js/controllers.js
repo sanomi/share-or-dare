@@ -1,3 +1,12 @@
+
+
+/** UIState is a custom piece of code that shuffles between UI states
+ eg:: If user is authenticated, the relevant DOM elements are brought to screen
+ and the rest are hidden. Using this method is NOT recommended!
+ */
+
+var username, UIState = {};
+
 angular.module('starter.controllers', [])
 
   .controller('loginCtrl', function($scope, $http, $state) {
@@ -6,13 +15,6 @@ angular.module('starter.controllers', [])
       kandy.setup({
 
       });
-
-    /** UIState is a custom piece of code that shuffles between UI states
-     eg:: If user is authenticated, the relevant DOM elements are brought to screen
-     and the rest are hidden. Using this method is NOT recommended!
-     */
-
-      var username, UIState = {};
 
       UIState.authenticated = function() {
       $('.username').text(username);
@@ -46,11 +48,11 @@ angular.module('starter.controllers', [])
      logs in user to Kandy Platform
      @params <string> domainApiId, <string> userName, <string> password, <function> success/failure
      */
-      kandy.login(apiKey, username, password,function(msg){
-
+    kandy.login(apiKey, username, password,function(user_access_token){
+      UIState.user_access_token = user_access_token;
       userArray.push(username);
       kandy.getLastSeen(userArray);
-          $state.go('tab.home');
+      $state.go('tab.home');
       //UIState.authenticated();
     },
       function(msg){
@@ -212,7 +214,7 @@ angular.module('starter.controllers', [])
 
               $chatItem.append($username, $message);
             } else if (contentType == "file") {
-              var userToken = $('#user_access_token').text();
+              var userToken = UIState.user_access_token;
               var fileName = message.message.content_name;
               var contentId = message.message.content_uuid;
 
@@ -225,7 +227,7 @@ angular.module('starter.controllers', [])
 
               $chatItem.append($username, $message);
             } else if (contentType == "image") {
-              var userToken = $('#user_access_token').text();
+              var userToken = UIState.user_access_token;
               var fileName = message.message.content_name;
               var contentId = message.message.content_uuid;
               var $chatItem = $('<div class="well text-left">');
@@ -236,7 +238,7 @@ angular.module('starter.controllers', [])
 
               $chatItem.append($username, $message);
             } else if (contentType == "audio") {
-              var userToken = $('#user_access_token').text();
+              var userToken = UIState.user_access_token;
               var fileName = message.message.content_name;
               var contentId = message.message.content_uuid;
               var $chatItem = $('<div class="well text-left">');
@@ -247,7 +249,7 @@ angular.module('starter.controllers', [])
 
               $chatItem.append($username, $message);
             } else if (contentType == "video") {
-              var userToken = $('#user_access_token').text();
+              var userToken = UIState.user_access_token;
               var fileName = message.message.content_name;
               var contentId = message.message.content_uuid;
               var $chatItem = $('<div class="well text-left">');
@@ -325,8 +327,13 @@ angular.module('starter.controllers', [])
           }
         }
 
+        $scope.initChat = function() {
+          fetchAllGroupNames();
+        };
+
         // Fetch All Groups created by the logged in User
         fetchAllGroupNames = function () {
+          console.log('Getting groups');
           kandy.messaging.getGroups(
             function (results) {
               var tabId = "group-names-send";
