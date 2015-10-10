@@ -31,12 +31,17 @@ color: #B61103;
 }
 
 body  {
-  font-family: 'Abel', sans-serif;
+  font-family: 'Aldrich', sans-serif;
+
+  /*font-family: 'Abel', sans-serif;*/
   font-size: 40px;
 }
 
 .padding {
-  font-family: 'Abel', sans-serif;
+
+  font-family: 'Aldrich', sans-serif;
+
+  /*font-family: 'Abel', sans-serif;*/
 
   background-color: #A61103;
 }
@@ -64,23 +69,30 @@ body  {
   background-color: #556573;
   color: #09070D;
   border: 3px solid #09070D;
-  font-family: 'Droid Serif', serif;
+  font-family: 'Aldrich', sans-serif;
   border-radius: 20px;
   float: right;
 
 }
 
 #activity-container {
-  font-family: 'Mr Bedfort', cursive;
+  font-family: 'Cabin Sketch', cursive;
+  /*font-family: 'Aldrich', sans-serif;*/
 }
 
 .h2 {
-  font-family: 'Mr Bedfort', cursive;
+  font-family: 'Balthazar', serif;
+  /*font-family: 'Aldrich', sans-serif;*/
+
+
+  /*font-family: 'Aldrich', sans-serif;*/
+
 
 }
 
 .form-horizontal .control-label {
-  font-family: 'Abel', sans-serif;
+  font-family: 'Aldrich', sans-serif;
+
 
 
   /*font-family: 'Droid Serif', serif;*/
@@ -134,5 +146,20 @@ title{
 }
 
 .item-divider{
-  min-height: 40px
+  min-height: 40px;
+}
+
+.scroll{
+  float: center;
+  width: 50%;
+}
+
+.list{
+  right: 50%;
+  left: 50%;
+  margin: 40px;
+}
+
+.control-label{
+  font-size: 21px
 }
