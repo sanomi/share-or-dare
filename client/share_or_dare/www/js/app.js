@@ -62,7 +62,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     .state('tab.share', {
       url: 'share',
       views: {
-        'tab-chats': {
+        'tab-share': {
           templateUrl: 'templates/tab-share.html',
           controller: 'shareCtrl'
         }

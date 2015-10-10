@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('homeCtrl', function($scope) {})
+.controller('homeCtrl', function($scope, $http) {})
 
 .controller('proposeCtrl', function($scope) {
   // With the new view caching in Ionic, Controllers are only called
@@ -16,6 +16,8 @@ angular.module('starter.controllers', [])
   
 })
 
-.controller('dareCtrl', function($scope) {
-
+.controller('dareCtrl', function($scope, $http) {
+  var ref = "http://localhost:3001/contactlist"
+  var dares = $http.get(ref)
+  console.log(dares);
 });
