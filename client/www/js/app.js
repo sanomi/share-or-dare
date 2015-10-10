@@ -72,25 +72,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-    .state('tab.share', {
-      url: 'share',
+    .state('tab.chatroom', {
+      url: '/chatroom',
       views: {
-        'tab-share': {
-          templateUrl: 'templates/tab-share.html',
-          controller: 'shareCtrl'
+        'tab-chatroom': {
+          templateUrl: 'templates/tab-chatroom.html',
+          controller: 'chatroomCtrl'
         }
       }
-    })
-
-  .state('tab.dare', {
-    url: '/dare',
-    views: {
-      'tab-dare': {
-        templateUrl: 'templates/tab-dare.html',
-        controller: 'dareCtrl'
-      }
-    }
-  });
+    });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/');
