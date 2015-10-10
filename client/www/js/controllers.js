@@ -6,6 +6,8 @@
  */
 
 var username, UIState = {};
+var apiKey = 'DAKa37c97c5a9fd472e94452cd5ac579d85';
+
 
 angular.module('starter.controllers', [])
 
@@ -41,7 +43,6 @@ angular.module('starter.controllers', [])
 
       // Values extracted from login form
       username = $('#username').val();
-      var apiKey = 'DAKa37c97c5a9fd472e94452cd5ac579d85';
       var password = $('#password').val();
 
     /** login(domainApiId, userName, password,success,failure)
@@ -208,7 +209,7 @@ angular.module('starter.controllers', [])
 
               var msgTextSend = message.message.text;
 
-              var $chatItem = $('<div class="well text-left">');
+              var $chatItem = $('<div class="well1 text-left">');
               var $username = $('<h5>').text(sendername);
               var $message = $('<p>').text(msgTextSend);
 
@@ -220,7 +221,7 @@ angular.module('starter.controllers', [])
 
               var downloadUrl = kandy.messaging.buildFileUrl(contentId);
 
-              var $chatItem = $('<div class="well text-left">');
+              var $chatItem = $('<div class="well1 text-left">');
               var $content = $('<a href=' + downloadUrl + ' target="_blank">');
               var $username = $('<h5>').text(sendername);
               var $message = $content.text(fileName);
@@ -230,7 +231,7 @@ angular.module('starter.controllers', [])
               var userToken = UIState.user_access_token;
               var fileName = message.message.content_name;
               var contentId = message.message.content_uuid;
-              var $chatItem = $('<div class="well text-left">');
+              var $chatItem = $('<div class="well1 text-left">');
               var downloadUrl = kandy.messaging.buildFileUrl(contentId);
               var $content = $('<a href=' + downloadUrl + ' target="_blank">');
               var $username = $('<h5>').text(sendername);
@@ -241,7 +242,7 @@ angular.module('starter.controllers', [])
               var userToken = UIState.user_access_token;
               var fileName = message.message.content_name;
               var contentId = message.message.content_uuid;
-              var $chatItem = $('<div class="well text-left">');
+              var $chatItem = $('<div class="well1 text-left">');
               var downloadUrl = kandy.messaging.buildFileUrl(contentId);
               var $content = $('<a href=' + downloadUrl + ' target="_blank">');
               var $username = $('<h5>').text(sendername);
@@ -252,7 +253,7 @@ angular.module('starter.controllers', [])
               var userToken = UIState.user_access_token;
               var fileName = message.message.content_name;
               var contentId = message.message.content_uuid;
-              var $chatItem = $('<div class="well text-left">');
+              var $chatItem = $('<div class="well1 text-left">');
               var downloadUrl = kandy.messaging.buildFileUrl(contentId);
               var $content = $('<a href=' + downloadUrl + ' target="_blank">');
               var $username = $('<h5>').text(sendername);
@@ -386,7 +387,7 @@ angular.module('starter.controllers', [])
           var selectedGrpObj = $("#group-names-send option:selected").val();
           var groupName = $("#group-names-send option:selected").text();
           $('#chat-message').val('');
-          var $chatItem = $('<div class="well text-right">');
+          var $chatItem = $('<div class="well1 text-right">');
           var $username = $('<h5>').text($('.username').html());
           var $message = $('<p>').text(message);
 
@@ -420,7 +421,7 @@ angular.module('starter.controllers', [])
           var selectedGrpObj = $("#group-names-send option:selected").val();
           var groupName = $("#group-names-send option:selected").text();
           fileName = message.message.content_name;
-          var $chatItem = $('<div class="well text-right">');
+          var $chatItem = $('<div class="well1 text-right">');
           var $username = $('<h5>').text($('.username').html());
           var $message = $('<p>').text(fileName);
 
@@ -463,7 +464,7 @@ angular.module('starter.controllers', [])
           var selectedGrpObj = $("#group-names-send option:selected").val();
           var groupName = $("#group-names-send option:selected").text();
           fileName = message.message.content_name;
-          var $chatItem = $('<div class="well text-right">');
+          var $chatItem = $('<div class="well1 text-right">');
           var $username = $('<h5>').text($('.username').html());
           var $message = $('<p>').text(fileName);
           $chatItem.append($username, $message);
@@ -491,7 +492,7 @@ angular.module('starter.controllers', [])
           var selectedGrpObj = $("#group-names-send option:selected").val();
           var groupName = $("#group-names-send option:selected").text();
           fileName = message.message.content_name;
-          var $chatItem = $('<div class="well text-right">');
+          var $chatItem = $('<div class="well1 text-right">');
           var $username = $('<h5>').text($('.username').html());
           var $message = $('<p>').text(fileName);
 
@@ -521,7 +522,7 @@ angular.module('starter.controllers', [])
           var selectedGrpObj = $("#group-names-send option:selected").val();
           var groupName = $("#group-names-send option:selected").text();
           fileName = message.message.content_name;
-          var $chatItem = $('<div class="well text-right">');
+          var $chatItem = $('<div class="well1 text-right">');
           var $username = $('<h5>').text($('.username').html());
           var $message = $('<p>').text(fileName);
 
