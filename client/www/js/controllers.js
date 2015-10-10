@@ -76,23 +76,27 @@ angular.module('starter.controllers', [])
   })
 
   .controller('homeCtrl', function($scope, $http) {
-    var ref = "http://localhost:3000/truths";
-    $scope.truth = $http.get(ref);
-    var ref = "http://localhost:3000/dares";
-    $scope.dare = $http.get(ref);
+    // var ref = "http://localhost:3000/truths";
+    // $scope.truth = $http.get(ref);
+    // var ref = "http://localhost:3000/dares";
+    // $scope.dare = $http.get(ref);
   })
 
-  .controller('proposeCtrl', function($scope) {
-  })
+  // .controller('proposeCtrl', function($scope) {
+  // })
 
-  .controller('shareCtrl', function($scope, $http) {
-    var ref = "http://localhost:3000/truths";
-    $scope.truth = $http.get(ref);
-    console.log(truth);
-  })
+  // .controller('shareCtrl', function($scope, $http) {
+  //   var ref = "http://localhost:3000/truths";
+  //   $scope.truth = $http.get(ref);
+  //   console.log(truth);
+  // })
 
-  .controller('dareCtrl', function($scope, $http) {
-    var ref = "http://localhost:3000/dares";
-    $scope.dare = $http.get(ref);
-    console.log($scope.dare);
-  });
+  // .controller('dareCtrl', function($scope, $http) {
+  //   var ref = "http://localhost:3000/dares";
+  //   $scope.dare = $http.get(ref);
+  //   console.log($scope.dare);
+  // });
+  .controller('chatCtrl', function($scope,$http){
+    // var ref = 'http://localhost:3000/chat';
+    // $scope.dare = $http.get(ref);
+  })
