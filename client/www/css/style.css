@@ -5,15 +5,25 @@
   border: 5px dashed #556573;
   background-color: #09070D;
   color: #F20058;
-  font-weight: 600px
+  font-weight: 600px;
 
+}
+
+.bar.bar-stable .title {
+color: #B61103;
+
+}
+
+.has-header{
+  top:25px;
 }
 
 .bar .title {
   font-color: #A61103;
-  font-size: 20px;
-  font-weight: 600px
-
+  font-size: 40px;
+  font-weight: 600px;
+  border-padding: 20px;
+  padding: 10px;
 }
 
 body  {
@@ -49,15 +59,17 @@ body  {
   color: #09070D;
   border: 3px solid #09070D;
   font-family: 'Droid Serif', serif;
+  border-radius: 20px;
+  float: right;
 
 }
 
 #activity-container {
-  font-family: 'Droid Serif', serif;
+  font-family: 'Mr Bedfort', cursive;
 }
 
 .h2 {
-  font-family: 'Droid Serif', serif;
+  font-family: 'Mr Bedfort', cursive;
 
 }
 
@@ -66,6 +78,30 @@ body  {
 
 }
 
-.shhhh {
-  border: 3px solid #556573;
+.shhh {
+  border: 3px solid #F2EBDF;
+  float: center;
+  margin: 20px
+}
+
+#sh{
+  text-align: center;
+  padding: 20px;
+}
+
+#login-form{
+  padding: 30px;
+}
+
+title{
+  height:100px;
+}
+
+.bar{
+  height: 70px;
+  padding-top: 10px;
+}
+
+.row {
+  padding: 20px;
 }
