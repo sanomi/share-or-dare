@@ -10,6 +10,8 @@
 }
 
 .bar.bar-stable .title {
+  background-color: #09070D;
+  /*border: 3px dashed #556573;*/
 color: #B61103;
 
 }
@@ -28,6 +30,7 @@ color: #B61103;
   font-weight: 600px;
   border-padding: 10px;
   padding: 5px;
+
 }
 
 body  {
@@ -162,4 +165,11 @@ title{
 
 .control-label{
   font-size: 21px
+}
+
+.well1 {
+  background-color: aliceblue;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
 }
