@@ -1,5 +1,5 @@
 .bar.bar-stable {
-  font-family: 'Nosifer', cursive;
+  font-family: 'Abel', sans-serif;
   font-weight: 40px;
   font-color: #A61103;
   border: 5px dashed #556573;
@@ -14,36 +14,42 @@ color: #B61103;
 
 }
 
+.item {
+  border: 2px solid #09070D;
+}
+
 .has-header{
-  top:25px;
+  top:35px;
 }
 
 .bar .title {
   font-color: #A61103;
   font-size: 40px;
   font-weight: 600px;
-  border-padding: 20px;
-  padding: 10px;
+  border-padding: 10px;
+  padding: 5px;
 }
 
 body  {
-  font-family: 'Timmana', sans-serif;
-  font-size: 30px;
+  font-family: 'Abel', sans-serif;
+  font-size: 40px;
 }
 
 .padding {
+  font-family: 'Abel', sans-serif;
+
   background-color: #A61103;
 }
 
 .card .item:first-child {
   background-color: #F2EBDF;
-  color: #A61103;
+  color: #09070D;
   border: 3px solid #09070D;
 }
 
 .card .item:last-child {
   background-color: #F2EBDF;
-  color: #A61103;
+  color: #09070D;
   border: 3px solid #09070D;
 }
 
@@ -74,7 +80,10 @@ body  {
 }
 
 .form-horizontal .control-label {
-  font-family: 'Droid Serif', serif;
+  font-family: 'Abel', sans-serif;
+
+
+  /*font-family: 'Droid Serif', serif;*/
 
 }
 
@@ -103,5 +112,27 @@ title{
 }
 
 .row {
-  padding: 20px;
+  padding: 30px;
+}
+
+#password {
+  border: 3px solid #09070D;
+  border-radius: 50px;
+  font-size: ;
+
+}
+
+#username{
+  border: 3px solid #09070D;
+  border-radius: 50px;
+
+}
+
+#api_key {
+  border: 3px solid #09070D;
+  border-radius: 50px;
+}
+
+.item-divider{
+  min-height: 40px
 }
