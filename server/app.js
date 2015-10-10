@@ -10,6 +10,18 @@ var users = require('./routes/users');
 
 var app = express();
 
+var Mongoose= require('mongoose')
+Mongoose.connect('mongodb://localhost/shareordare');
+
+var CORS = (function(req,res,next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Cache-Control, Pragma, Origin, Authorization, Content-Type, X-Requested-With");
+  res.header("Access-Control-Allow-Methods", "DELETE, GET, PUT, POST");
+  next();
+})
+
+app.use(CORS);
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
