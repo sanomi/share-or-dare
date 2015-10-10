@@ -39,7 +39,7 @@ angular.module('starter.controllers', [])
 
       // Values extracted from login form
       username = $('#username').val();
-      var apiKey = $('#api_key').val();
+      var apiKey = 'DAKa37c97c5a9fd472e94452cd5ac579d85';
       var password = $('#password').val();
 
     /** login(domainApiId, userName, password,success,failure)
