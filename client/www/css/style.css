@@ -1,0 +1,71 @@
+.bar.bar-stable {
+  font-family: 'Nosifer', cursive;
+  font-weight: 40px;
+  font-color: #A61103;
+  border: 5px dashed #556573;
+  background-color: #09070D;
+  color: #F20058;
+  font-weight: 600px
+
+}
+
+.bar .title {
+  font-color: #A61103;
+  font-size: 20px;
+  font-weight: 600px
+
+}
+
+body  {
+  font-family: 'Timmana', sans-serif;
+  font-size: 30px;
+}
+
+.padding {
+  background-color: #A61103;
+}
+
+.card .item:first-child {
+  background-color: #F2EBDF;
+  color: #A61103;
+  border: 3px solid #09070D;
+}
+
+.card .item:last-child {
+  background-color: #F2EBDF;
+  color: #A61103;
+  border: 3px solid #09070D;
+}
+
+.btn-success {
+  background-color: #556573;
+  border-color: #556573;
+  background-image: #556573;
+  /*color: #556573;*/
+}
+
+#login-btn {
+  background-color: #556573;
+  color: #09070D;
+  border: 3px solid #09070D;
+  font-family: 'Droid Serif', serif;
+
+}
+
+#activity-container {
+  font-family: 'Droid Serif', serif;
+}
+
+.h2 {
+  font-family: 'Droid Serif', serif;
+
+}
+
+.form-horizontal .control-label {
+  font-family: 'Droid Serif', serif;
+
+}
+
+.shhhh {
+  border: 3px solid #556573;
+}
