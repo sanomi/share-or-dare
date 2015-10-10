@@ -31,26 +31,39 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   // Each state's controller can be found in controllers.js
   $stateProvider
 
+
+    .state('login', {
+      url: '/',
+      views: {
+        'tab-home': {
+          templateUrl: 'templates/login.html',
+          controller: 'loginCtrl'
+        }
+      }
+    })
+
   // setup an abstract state for the tabs directive
     .state('tab', {
     url: '/tab',
     abstract: true,
     templateUrl: 'templates/tabs.html'
   })
-
   // Each tab has its own nav history stack:
 
-  .state('tab.home', {
-    url: '/home',
-    views: {
-      'tab-home': {
-        templateUrl: 'templates/tab-home.html',
-        controller: 'homeCtrl'
-      }
-    }
-  })
 
-  .state('tab.propose', {
+
+
+    .state('tab.home', {
+      url: '/home',
+      views: {
+        'tab-home': {
+          templateUrl: 'templates/tab-home.html',
+          controller: 'homeCtrl'
+        }
+      }
+    })
+
+    .state('tab.propose', {
       url: '/propose',
       views: {
         'tab-propose': {
@@ -80,7 +93,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/home');
+  $urlRouterProvider.otherwise('/');
 
 });
 
