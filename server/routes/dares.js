@@ -16,12 +16,12 @@ var dares = [
 	'Pee on a fire hydrant.'
 	];
 
-// function random(dares) {
-// 	return Math.floor(Math.random() * dares.length) + 1 
-// }
+function random(dares) {
+	return Math.floor(Math.random() * dares.length)
+}
 
-// var num = random();
-  res.send('dares');
+var num = random(dares);
+  res.send(dares[num]);
 });
 
 module.exports = router;
