@@ -12,7 +12,7 @@
 .bar.bar-stable .title {
   background-color: #09070D;
   /*border: 3px dashed #556573;*/
-color: #B61103;
+  color: #B61103;
 
 }
 
@@ -154,13 +154,15 @@ title{
 
 .scroll{
   float: center;
-  width: 50%;
+  width: 80%;
+  margin: 2% auto 0px auto;
 }
 
 .list{
   right: 50%;
   left: 50%;
   margin: 40px;
+  position: initial;
 }
 
 .control-label{
@@ -172,4 +174,26 @@ title{
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 5px;
+}
+.blockvert{
+ display: block;
+ width: 100%;
+ font-size: 2vw;
+}
+
+.members{
+ display: block;
+}
+
+.form-group{
+ display: block;
+}
+
+.login-btn{
+ background-color: #556573 ;
+ color: #09070D ;
+ border: 3px solid #09070D ;
+ font-family: 'Abel', sans-serif;
+ border-radius: 20px;
+ float: right;
 }

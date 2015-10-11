@@ -1,64 +1,63 @@
-<<<<<<< HEAD
-
 <ion-view view-title="tab-chat" ng-init="initChat()">
-  <ion-content class="padding">
-    <div class="list card">
+ <ion-content class="padding">
 
-      <div class="row">
-        <div class="col-xs-8 col-xs-offset-2" id="activity-container">
+   <div class="blockvert">
+       <p class="chatpagep">DO YOU DARE? THEN SHARE!<p/>
+   </div>
+   <div class='blockvert'>
+       <p class="chatpagep">Post your efforts and let your group decide: Did you PWN or FAIL?</p>
+   </div>
+   <div class="blockvert">
+     <div id="chat-container">
+       <h6>
+         Messages
+       </h6>
+       <div id="chat-messages"></div>
+       <hr />
+       <div id="chat-input">
+         <div class="form-group members">
+           <label style="float: left; padding-top: 5px;" for="chat-group">Select Group</label><select name="group-names-send" id="group-names-send" class="form-control" style="width: 70%; display: inline-block; float: left; margin-left: 16px;"></select>
+   
+           <button name="button" type="submit" class="pull-left inline login-btn" id="leaveGroup">Leave Group</button>
+         </div>
+         <br><br><br><br><br>
+         <div class="form-group members">
+           <h4 id="groupHeading">
+             Group Members
+           </h4>
+           <ul class="list-unstyled" id="chatUserdata" style="display:none"></ul>
+           <label class="sendMsgTextNoMember" style="padding-bottom: 20px; font-size: 13px; font-weight: normal; margin-left: 10px; display: none;" for="sendMsgTextNoMember">The group selected has no members added</label>
+         </div>
 
-          <div id="app-details">
-            <h1>DO YOU DARE? THEN SHARE!</h1>
-            <p>Post your efforts and let your group decide: Did you PWN or FAIL?</p>
-          </div>
-
-          <div id="chat-container">
-            <h3>
-              Messages
-            </h3>
-            <div id="chat-messages"></div>
-            <hr />
-            <div id="chat-input">
-              <div class="form-group">
-                <label style="float: left; padding-top: 5px;" for="chat-group">Select Group</label><select name="group-names-send" id="group-names-send" class="form-control" style="width: 70%; display: inline-block; float: left; margin-left: 16px;"></select><button name="button" type="submit" class="btn btn-success pull-right inline" id="leaveGroup">Leave Group</button>
-              </div>
-              <div class="form-group">
-                <h4 id="groupHeading">
-                  Group Members
-                </h4>
-                <ul class="list-unstyled" id="chatUserdata" style="display:none"></ul>
-                <label class="sendMsgTextNoMember" style="padding-bottom: 20px; font-size: 13px; font-weight: normal; margin-left: 10px; display: none;" for="sendMsgTextNoMember">The group selected has no members added</label>
-              </div>
+         <div class="form-group">
+           <label for="chat-message">Chat Message</label>
+           <textarea name="chat-message" id="chat-message" class="form-control"></textarea>
+           <button name="button" type="submit" class="login-btn" id="send_msg" style="margin-top: 10px">Send</button>
+         </div>
+          
                <br/>
-              <button ng-click='chooseTruth()'>Truth</button>
+              <button class='pull-left inline login-btn' ng-click='chooseTruth()'>Truth</button>
               {{truth}}
-              <button ng-click='chooseDare()'>Dare</button>
+              <button class='pull-left inline login-btn' ng-click='chooseDare()'>Dare</button>
               {{dare}}
-              <div class="form-group">
-                <label for="chat-message">Chat Message</label>
-                <textarea name="chat-message" id="chat-message" class="form-control"></textarea>
-                <button name="button" type="submit" class="btn btn-success" id="send_msg" style="margin-top: 10px">Send</button>
-              </div>
+         <div class="form-group">
+           <input type="radio" name="chatRadioButton" id="chatFileRadioButton" value="sendFile" /><label style="margin-left: 5px;margin-right: 5px" for="optionsRadios1">Chat File</label>
+           <input type="radio" name="chatRadioButton" id="chatImageRadioButton" value="sendImage" /><label style="margin-left: 5px;margin-right: 5px" for="optionsRadios1">Chat Image</label>
+           <input type="radio" name="chatRadioButton" id="chatAudioRadioButton" value="sendAudio" /><label style="margin-left: 5px;margin-right: 5px" for="optionsRadios1">Chat Audio</label>
+           <input type="radio" name="chatRadioButton" id="chatVideoRadioButton" value="sendVideo" /><label style="margin-left: 5px;margin-right: 5px" for="optionsRadios1">Chat Video</label>
 
-              <div class="form-group">
-                <input type="radio" name="chatRadioButton" id="chatFileRadioButton" value="sendFile" /><label style="margin-left: 5px;margin-right: 5px" for="optionsRadios1">Chat File</label>
-                <input type="radio" name="chatRadioButton" id="chatImageRadioButton" value="sendImage" /><label style="margin-left: 5px;margin-right: 5px" for="optionsRadios1">Chat Image</label>
-                <input type="radio" name="chatRadioButton" id="chatAudioRadioButton" value="sendAudio" /><label style="margin-left: 5px;margin-right: 5px" for="optionsRadios1">Chat Audio</label>
-                <input type="radio" name="chatRadioButton" id="chatVideoRadioButton" value="sendVideo" /><label style="margin-left: 5px;margin-right: 5px" for="optionsRadios1">Chat Video</label>
+           <div class="form-group"></div>
+           <label for="chat-message">Chat File</label>
+           <input type="file" name="imFile" id="imFile" class="form-control" />
 
-                <div class="form-group"></div>
-                <label for="chat-message">Chat File</label>
-                <input type="file" name="imFile" id="imFile" class="form-control" />
+         </div>
+         <button name="button" type="submit" class="login-btn" id="send_file">Send</button>
 
-              </div>
-              <button name="button" type="submit" class="btn btn-success" id="send_file">Send</button>
+       </div>
+     </div>
+   </div>
 
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-  </ion-content>
+ </ion-content>
 </ion-view>
+
+

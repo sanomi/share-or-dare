@@ -84,31 +84,19 @@ angular.module('starter.controllers', [])
     // var ref = "http://localhost:3000/dares";
     // $scope.dare = $http.get(ref);
   })
-
-  // .controller('proposeCtrl', function($scope) {
-  // })
-  // .controller('shareCtrl', function($scope, $http) {
-  //   var ref = "http://localhost:3000/truths";
-  //   $scope.truth = $http.get(ref);
-  //   console.log(truth);
-  // })
-
-  // .controller('dareCtrl', function($scope, $http) {
-  //   var ref = "http://localhost:3000/dares";
-  //   $scope.dare = $http.get(ref);
-  //   console.log($scope.dare);
-  // });
   .controller('chatCtrl', function($scope,$http){
     $scope.chooseTruth = function() {
       console.log('truth')
       $http.get('http://localhost:3000/truths').then(function(data){
         console.log(data)
         $scope.truth= data.data;
+        $scope.dare ='';
       })
     }
     $scope.chooseDare = function() {
       $http.get('http://localhost:3000/dares').then(function(data){
         $scope.dare= data.data;
+        $scope.truth= '';
       })
     }
       $(function() {
@@ -223,7 +211,7 @@ angular.module('starter.controllers', [])
 
               var $chatItem = $('<div class="well1 text-left">');
               var $username = $('<h5>').text(sendername);
-              var $message = $('<p>').text(msgTextSend);
+              var $message = $('<p>').html(msgTextSend + "<br/><button ng-click='up()'>+</button><button ng-click'down()'>-</button>");
 
               $chatItem.append($username, $message);
             } else if (contentType == "file") {
@@ -236,7 +224,7 @@ angular.module('starter.controllers', [])
               var $chatItem = $('<div class="well1 text-left">');
               var $content = $('<a href=' + downloadUrl + ' target="_blank">');
               var $username = $('<h5>').text(sendername);
-              var $message = $content.text(fileName);
+              var $message = $content.text(fileName + "<br/><button ng-click='up()'>+</button><button ng-click'down()'>-</button>");
 
               $chatItem.append($username, $message);
             } else if (contentType == "image") {
@@ -247,7 +235,7 @@ angular.module('starter.controllers', [])
               var downloadUrl = kandy.messaging.buildFileUrl(contentId);
               var $content = $('<a href=' + downloadUrl + ' target="_blank">');
               var $username = $('<h5>').text(sendername);
-              var $message = $content.text(fileName);
+              var $message = $content.text(fileName + "<br/><button ng-click='up()'>+</button><button ng-click'down()'>-</button>");
 
               $chatItem.append($username, $message);
             } else if (contentType == "audio") {
@@ -258,7 +246,7 @@ angular.module('starter.controllers', [])
               var downloadUrl = kandy.messaging.buildFileUrl(contentId);
               var $content = $('<a href=' + downloadUrl + ' target="_blank">');
               var $username = $('<h5>').text(sendername);
-              var $message = $content.text(fileName);
+              var $message = $content.text(fileName + "<br/><button ng-click='up()'>+</button><button ng-click'down()'>-</button>");
 
               $chatItem.append($username, $message);
             } else if (contentType == "video") {
@@ -269,7 +257,7 @@ angular.module('starter.controllers', [])
               var downloadUrl = kandy.messaging.buildFileUrl(contentId);
               var $content = $('<a href=' + downloadUrl + ' target="_blank">');
               var $username = $('<h5>').text(sendername);
-              var $message = $content.text(fileName);
+              var $message = $content.text(fileName + "<br/><button ng-click='up()'>+</button><button ng-click'down()'>-</button>");
 
               $chatItem.append($username, $message);
             }
