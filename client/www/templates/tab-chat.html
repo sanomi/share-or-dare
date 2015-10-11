@@ -22,7 +22,6 @@
               <div class="form-group">
                 <label style="float: left; padding-top: 5px;" for="chat-group">Select Group</label><select name="group-names-send" id="group-names-send" class="form-control" style="width: 70%; display: inline-block; float: left; margin-left: 16px;"></select><button name="button" type="submit" class="btn btn-success pull-right inline" id="leaveGroup">Leave Group</button>
               </div>
-
               <div class="form-group">
                 <h4 id="groupHeading">
                   Group Members
@@ -30,7 +29,11 @@
                 <ul class="list-unstyled" id="chatUserdata" style="display:none"></ul>
                 <label class="sendMsgTextNoMember" style="padding-bottom: 20px; font-size: 13px; font-weight: normal; margin-left: 10px; display: none;" for="sendMsgTextNoMember">The group selected has no members added</label>
               </div>
-
+               <br/>
+              <button ng-click='chooseTruth()'>Truth</button>
+              {{truth}}
+              <button ng-click='chooseDare()'>Dare</button>
+              {{dare}}
               <div class="form-group">
                 <label for="chat-message">Chat Message</label>
                 <textarea name="chat-message" id="chat-message" class="form-control"></textarea>

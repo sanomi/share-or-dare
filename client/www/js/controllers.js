@@ -99,6 +99,18 @@ angular.module('starter.controllers', [])
   //   console.log($scope.dare);
   // });
   .controller('chatCtrl', function($scope,$http){
+    $scope.chooseTruth = function() {
+      console.log('truth')
+      $http.get('http://localhost:3000/truths').then(function(data){
+        console.log(data)
+        $scope.truth= data.data;
+      })
+    }
+    $scope.chooseDare = function() {
+      $http.get('http://localhost:3000/dares').then(function(data){
+        $scope.dare= data.data;
+      })
+    }
       $(function() {
 
         var userArray = [];
